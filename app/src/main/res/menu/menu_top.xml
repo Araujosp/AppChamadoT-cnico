@@ -5,11 +5,17 @@
         android:id="@+id/menu_config"
         android:title="Config"
         android:icon="@android:drawable/ic_menu_manage"
-        app:showAsAction="always"/>
+        app:showAsAction="always"
+        />
 
     <item
         android:id="@+id/menu_sobre"
         android:title="Sobre"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/menu_cadastro"
+        android:title="Cadastro"
         app:showAsAction="never"/>
 
 </menu>

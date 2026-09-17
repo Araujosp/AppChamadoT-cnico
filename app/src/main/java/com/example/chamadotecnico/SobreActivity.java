@@ -15,7 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.appbar.MaterialToolbar;
 
-public class MainActivity extends AppCompatActivity {
+public class SobreActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,19 +44,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item){
 
-    if (item.getItemId() == R.id.menu_config){
-        Toast.makeText(this, "Configurações Selecionadas",
-                Toast.LENGTH_SHORT).show();
-        return true;
-    }
+        if (item.getItemId() == R.id.menu_config){
+            Toast.makeText(SobreActivity.this, "Configurações Selecionadas",
+                    Toast.LENGTH_SHORT).show();
+            return true;
+        }
 
-    if(item.getItemId() == R.id.menu_sobre){
-        Intent intent = new Intent(MainActivity.this, SobreActivity.class);
-        startActivity(intent);
-        return true;
-    }
         if(item.getItemId() == R.id.menu_cadastro){
-            Intent intent = new Intent(MainActivity.this, CadastroActivity.class);
+            Intent intent = new Intent(SobreActivity.this, CadastroActivity.class);
             startActivity(intent);
             return true;
         }
